@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div Layout Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Divide page into 3 rows */
+        .main {
+            display: grid;
+            grid-template-rows: 80px 50px 1fr;
+            height: 100vh;
+        }
+
+        /* ---------- ROW 1 ---------- */
+        .row1 {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            background-color: #860206;
+            color: #dcd21a;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .header {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* ---------- ROW 2 ---------- */
+        .row2 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            background-color: #001529;
+        }
+
+        .row2 a {
+            color: rgb(215, 196, 51);
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            border-right: 1px solid #010e1b;
+        }
+
+        .row2 a:hover {
+            background-color: #1a32bc;
+        }
+
+        /* ---------- ROW 3 ---------- */
+        .row3 {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+        }
+
+        .services {
+            background-color: #FFFFF0;
+            padding: 10px;
+        }
+
+        .services a {
+            display: block;
+            padding: 8px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            background-color: #f3f3ac;
+            color: black;
+        }
+
+        .services a:hover {
+            background-color: #95a5a6;
+        }
+
+        .content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- ROW 1 -->
+    <div class="row1">
+        <div class="logo">
+            <img src="https://marketplace.canva.com/EAGirWJI-O0/1/0/1600w/canva-orange-black-illustrative-simple-online-store-logo-th4yuT1NtQg.jpg" alt="Logo">
+        </div>
+        <div class="header">
+            My Online Store
+        </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="row2">
+        <a href="home.html" target="frame">Home</a>
+        <a href="login.html" target="frame">Login</a>
+        <a href="register.html" target="frame">Registration</a>
+        <a href="cart.html" target="frame">Cart</a>
+        <a href="contact.html" target="frame">Contact Us</a>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="row3">
+
+        <!-- Left Column -->
+        <div class="services">
+            <h3>Services</h3>
+            <a href="service1.html" target="frame">Online Shopping</a>
+            <a href="service2.html" target="frame">Fast Delivery</a>
+            <a href="service3.html" target="frame">Customer Support</a>
+            <a href="service4.html" target="frame">Gift Cards</a>
+        </div>
+
+        <!-- Right Column -->
+     <div class="content">
+    <iframe name="frame" src="home.html"></iframe>
+</div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
